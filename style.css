@@ -1,6 +1,6 @@
 /* --- KEYFRAMES UNTUK ANIMASI (Masih sama) --- */
 
-/* 1. Efek Kelap-kelip halus pada teks */
+/* 1. Efek Kelap-kelip di teks */
 @keyframes textGlow {
     0%, 100% { text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
     50% { text-shadow: 0 0 15px rgba(255, 255, 255, 0.6); }
@@ -10,10 +10,10 @@
 @keyframes floatAndSpin {
     0%, 100% {
         transform: translateY(0) rotate(0deg);
-        opacity: 0.6; /* Sedikit transparan agar menyatu */
+        opacity: 0.6; 
     }
     50% {
-        transform: translateY(-15px) rotate(5deg); /* Putaran diperkecil agar tidak pusing */
+        transform: translateY(-15px) rotate(5deg); 
         opacity: 0.9;
     }
 }
@@ -59,10 +59,9 @@ header h1 {
 header {
     position: relative;
     overflow: hidden;
-    /* ... styling header kamu yang lain ... */
 }
 
-/* Membuat banyak bulatan kecil dengan satu elemen */
+/* bulatan kecil */
 .header-particles {
     position: absolute;
     top: 0;
@@ -73,7 +72,6 @@ header {
     border-radius: 50%;
     opacity: 0.6;
     
-    /* Menggunakan vw agar menyebar dari 0% sampai 100% lebar layar */
     box-shadow: 
         10vw 10vh 1px white,
         25vw 30vh 2px white,
@@ -99,10 +97,6 @@ header {
 /* --- STYLING BARU UNTUK GAMBAR YANG FLOATING --- */
 .header-image {
     position: absolute;
-    /* Menggunakan filter agar gambar PNG hitam menjadi putih (opsional, jika gambar kamu berwarna gelap) */
-    /* filter: brightness(0) invert(1); */
-    
-    /* Terapkan animasi */
     animation: floatAndSpin 6s infinite ease-in-out;
 }
 
@@ -115,18 +109,18 @@ header {
 
 /* Posisi dan Ukuran Gambar Kiri */
 .img-left {
-    width: 80px; /* Atur lebar gambar sesuai keinginan */
-    top: -20px;
+    width: 110px; 
+    top: 80px;
     left: 10%;
     animation-delay: 0s;
 }
 
 /* Posisi dan Ukuran Gambar Kanan */
 .img-right {
-    width: 100px; /* Atur lebar gambar sesuai keinginan */
-    bottom: 40px;
+    width: 100px; 
+    bottom: -30px;
     right: 10%;
-    animation-delay: 1s; /* Delay agar gerakannya silang */
+    animation-delay: 1s; 
 }
 
 /* --- STYLING LINK POWERPOINT --- */
@@ -170,7 +164,7 @@ header {
 /* Kontainer utama konten */
 .header-content {
     position: relative;
-    z-index: 10; /* Berada di atas lingkaran dekorasi */
+    z-index: 10; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -183,7 +177,6 @@ header h1 {
     margin: 0;
     padding: 0;
     letter-spacing: 2px;
-    /* Terapkan animasi kelap-kelip */
     animation: textGlow 3s infinite ease-in-out;
 }
 
@@ -200,7 +193,6 @@ header h1 {
     font-size: 2rem;
     position: absolute;
     opacity: 0.8;
-    /* Terapkan animasi melayang */
     animation: floatAndSpin 5s infinite ease-in-out;
 }
 
@@ -214,7 +206,7 @@ header h1 {
     bottom: 50px;
     right: 12%;
     font-size: 2.5rem;
-    animation-delay: 1s; /* Delay agar gerakannya tidak bareng */
+    animation-delay: 1s;
 }
 
 /* --- STYLING LINK POWERPOINT --- */
@@ -268,7 +260,7 @@ nav ul {
 }
 
 nav ul li a {
-    background: rgba(255, 255, 255, 0.2); /* Tombol transparan */
+    background: rgba(255, 255, 255, 0.2); 
     color: white;
     text-decoration: none;
     padding: 10px 25px;
@@ -277,7 +269,7 @@ nav ul li a {
     font-size: 0.9rem;
     border: 1px solid rgba(255, 255, 255, 0.4);
     transition: all 0.3s ease;
-    backdrop-filter: blur(5px); /* Efek kaca (glassmorphism) */
+    backdrop-filter: blur(5px); 
 }
 
 /* Efek saat tombol navigasi disentuh */
@@ -291,7 +283,6 @@ nav ul li a:hover {
 /* Layar Background*/
 body {
     background-color: #fbb8cb;
-    /* Menambahkan gradien agar warna dasar tidak flat */
     background-image: 
         radial-gradient(#2c1a1a 1px, transparent 1px),
         linear-gradient(135deg, #fbb8cb 0%, #f7a0b9 100%);
@@ -299,7 +290,6 @@ body {
     background-attachment: fixed;
     margin: 0;
     padding: 0;
-    /* Animasi halus agar pola titik bergerak sedikit */
     animation: backgroundMove 60s linear infinite;
 }
 
@@ -313,11 +303,9 @@ body {
     position: fixed;
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
     
-    /* Menaikkan angka terakhir (alpha) agar warna lebih muncul */
-    /* 0.15 sudah cukup jelas, gunakan 0.3 jika ingin sangat mencolok */
     background: rgba(255, 255, 255, 0.25); 
     
-    /* Efek blur sedikit dikurangi agar bentuk bintang lebih tajam */
+    /* Efek blur */
     backdrop-filter: blur(1px); 
     
     z-index: -2;
@@ -333,7 +321,7 @@ body {
     right: -300px;
 }
 
-/* Bintang 2 (Kiri Bawah) - Sedikit lebih tipis dari bintang 1 agar ada dimensi */
+/* Bintang 2 (Kiri Bawah) */
 .star-2 {
     width: 700px;
     height: 700px;
@@ -343,7 +331,7 @@ body {
     animation-delay: -5s;
 }
 
-/* Bintang 3 (Tengah) - Menggunakan warna pink terang agar senada */
+/* Bintang 3 (Tengah) */
 .star-3 {
     width: 400px;
     height: 400px;
@@ -359,7 +347,6 @@ body {
     100% { transform: rotate(0deg) translate(0, 0); }
 }
 
-/* Pastikan Body tidak punya scroll horizontal karena bintang raksasa ini */
 body {
     overflow-x: hidden;
     margin: 0;
@@ -373,7 +360,7 @@ body {
     height: 100vh;
     transform: translate(-50%, -50%);
     background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
-    pointer-events: none; /* Agar tidak menghalangi klik */
+    pointer-events: none;
     z-index: -1;
 }
 
@@ -416,12 +403,12 @@ main {
     align-items: center;
     background: #ffffff;
     padding: 20px 25px;
-    border-radius: 16px; /* Lebih melengkung agar modern */
+    border-radius: 16px; 
     text-decoration: none;
     color: #333;
-    border: 1px solid rgba(0,0,0,0.05); /* Border tipis halus */
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efek pantul */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02); /* Shadow halus */
+    border: 1px solid rgba(0,0,0,0.05); 
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02); 
     position: relative;
     overflow: hidden;
 }
@@ -480,19 +467,19 @@ main {
 /* --- Efek Hover --- */
 .menu-item:hover {
     background-color: #ffffff;
-    transform: translateY(-5px); /* Kotak naik ke atas */
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08); /* Shadow lebih tebal */
+    transform: translateY(-5px); 
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08); 
     border-color: rgba(52, 152, 219, 0.3);
 }
 
 .menu-item:hover::before {
-    transform: scaleY(1); /* Muncul garis warna di kiri */
+    transform: scaleY(1); 
 }
 
 .menu-item:hover .menu-icon {
     background: #f28ba3;
-    color: white; /* Icon berubah warna latar belakangnya */
-    transform: rotate(-10deg); /* Icon miring sedikit biar fun */
+    color: white;
+    transform: rotate(-10deg); 
 }
 
 .menu-item:hover .menu-text h3 {
@@ -501,7 +488,7 @@ main {
 
 .menu-item:hover .arrow {
     color: #f28ba3;
-    transform: translateX(8px); /* Panah maju ke kanan */
+    transform: translateX(8px); 
 }
 
 
