@@ -1,4 +1,4 @@
-/* --- KEYFRAMES UNTUK ANIMASI (Masih sama) --- */
+/* --- KEYFRAMES UNTUK ANIMASI --- */
 
 /* 1. Efek Kelap-kelip di teks */
 @keyframes textGlow {
@@ -158,7 +158,7 @@ header {
     
     /* Perkecil ukuran gambar di HP */
     .img-left { width: 50px; left: 5%; }
-    .img-right { width: 60px; right: 5%; bottom: 60px;}
+    .img-right { width: 40px; right: 5%; bottom: 30px;}
 }
 
 /* Kontainer utama konten */
