@@ -1,0 +1,204 @@
+/* Header & Navigasi */
+header {
+    /* Gradien warna yang lebih terang */
+    background: linear-gradient(135deg, #d895c0 0%, #f28ba3 100%);
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    /* Memberikan efek lengkungan di bagian bawah header */
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    /* Efek bayangan agar terlihat timbul */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Hiasan tambahan berupa lingkaran dekoratif di background header */
+header::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    /* Memberikan efek bayangan pada teks agar lebih terbaca */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-family: "Microsoft JhengHei", sans-serif;
+}
+
+/* Navigasi */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-top: 20px;
+}
+
+nav ul li a {
+    background: rgba(255, 255, 255, 0.2); /* Tombol transparan */
+    color: white;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px); /* Efek kaca (glassmorphism) */
+}
+
+/* Efek saat tombol navigasi disentuh */
+nav ul li a:hover {
+    background: white;
+    color: #fbb8cb;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Layar Background*/
+body {
+    background-color: #fbb8cb;
+    /* Pola titik-titik transparan */
+    background-image: radial-gradient(#2c1a1a 1px, transparent 1px);
+    background-size: 20px 20px; /* Jarak antar titik */
+}
+
+
+/* Bagian Utama */
+main {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.hero {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #000000;
+    font-size: 1.1rem;
+}
+
+/* Container utama untuk menu */
+.menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 550px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+/* Styling setiap item (Persegi Panjang) */
+.menu-item {
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    padding: 20px 25px;
+    border-radius: 16px; /* Lebih melengkung agar modern */
+    text-decoration: none;
+    color: #333;
+    border: 1px solid rgba(0,0,0,0.05); /* Border tipis halus */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efek pantul */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02); /* Shadow halus */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efek garis warna di pinggir saat hover */
+.menu-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 5px;
+    background: #f28ba3;
+    transform: scaleY(0);
+    transition: transform 0.3s ease;
+}
+
+/* Bagian Icon */
+.menu-icon {
+    font-size: 30px;
+    margin-right: 25px;
+    background: #f0f7ff;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+/* Bagian teks */
+.menu-text {
+    flex-grow: 1;
+}
+
+.menu-text h3 {
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+    color: #dfa3c0;
+    transition: color 0.3s;
+}
+
+.menu-text p {
+    font-size: 0.9rem;
+    color: #95a5a6;
+}
+
+/* Panah */
+.arrow {
+    font-size: 1.2rem;
+    color: #050606;
+    transition: all 0.3s ease;
+}
+
+/* --- Efek Hover --- */
+.menu-item:hover {
+    background-color: #ffffff;
+    transform: translateY(-5px); /* Kotak naik ke atas */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08); /* Shadow lebih tebal */
+    border-color: rgba(52, 152, 219, 0.3);
+}
+
+.menu-item:hover::before {
+    transform: scaleY(1); /* Muncul garis warna di kiri */
+}
+
+.menu-item:hover .menu-icon {
+    background: #f28ba3;
+    color: white; /* Icon berubah warna latar belakangnya */
+    transform: rotate(-10deg); /* Icon miring sedikit biar fun */
+}
+
+.menu-item:hover .menu-text h3 {
+    color: #3498db;
+}
+
+.menu-item:hover .arrow {
+    color: #3498db;
+    transform: translateX(8px); /* Panah maju ke kanan */
+}
+
+
